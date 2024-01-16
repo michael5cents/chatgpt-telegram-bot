@@ -1,7 +1,7 @@
 import logging
 import os
 
-from env import load_env
+from dot_env import load_dot_env
 
 from plugin_manager import PluginManager
 from openai_helper import OpenAIHelper, default_max_tokens, are_functions_available
@@ -10,7 +10,7 @@ from telegram_bot import ChatGPTTelegramBot
 
 def main():
     # Read .env file
-    load_env()
+    load_dot_env()
 
     # Setup logging
     logging.basicConfig(
